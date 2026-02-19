@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f4f4f4;
   font-family: Arial, sans-serif;
@@ -17,6 +21,13 @@ nav a {
 
 section {
   margin: 20px;
+}
+
+section {
+  background: #fafafa;
+  padding: 15px;
+  border: 2px solid black;
+  margin-top: 20px;
 }
 
 section {
