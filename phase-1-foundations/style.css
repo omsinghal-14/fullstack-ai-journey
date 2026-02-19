@@ -23,8 +23,14 @@ nav {
 
 nav a {
   color: white;
-  margin-right: 15px;
   text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #444;
 }
 
 section {
