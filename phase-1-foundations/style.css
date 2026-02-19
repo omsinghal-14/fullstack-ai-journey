@@ -28,19 +28,9 @@ nav a {
 }
 
 section {
-  margin: 20px;
-}
-
-section {
   background: #fafafa;
   padding: 15px;
-  border: 2px solid black;
-  margin-top: 20px;
-}
-
-section {
-  background: #fafafa;
-  padding: 15px;
+  margin: 20px 0;
   border-radius: 6px;
 }
 
