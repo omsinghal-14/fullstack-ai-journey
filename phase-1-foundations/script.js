@@ -1,5 +1,7 @@
-const heading = document.querySelector("h1");
+const headings = document.querySelectorAll("h2");
 
-heading.addEventListener("click", function() {
-  alert("You clicked the heading!");
+headings.forEach(function(heading) {
+  heading.addEventListener("click", function() {
+    alert("You clicked a section heading!");
+  });
 });
