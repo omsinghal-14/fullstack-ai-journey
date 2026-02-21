@@ -8,3 +8,17 @@ button.addEventListener("click", function() {
 const word = count === 1 ? "time" : "times";
 text.textContent = `Clicked ${count} ${word}`;
 });
+
+let goals = [
+  "Become full stack developer",
+  "Build AI projects",
+  "Get hired"
+];
+
+const goalList = document.querySelector("#goalList");
+
+goals.forEach(function(goal) {
+  const li = document.createElement("li");
+  li.textContent = goal;
+  goalList.appendChild(li);
+});
