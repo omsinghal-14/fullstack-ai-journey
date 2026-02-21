@@ -20,5 +20,10 @@ const goalList = document.querySelector("#goalList");
 goals.forEach(function(goal) {
   const li = document.createElement("li");
   li.textContent = goal;
+
+  li.addEventListener("click", function() {
+    li.classList.toggle("active-heading");
+  });
+  
   goalList.appendChild(li);
 });
