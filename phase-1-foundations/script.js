@@ -24,6 +24,29 @@ goals.forEach(function(goal) {
   li.addEventListener("click", function() {
     li.classList.toggle("active-heading");
   });
-  
+
   goalList.appendChild(li);
+});
+
+const input = document.querySelector("#goalInput");
+const addBtn = document.querySelector("#addGoalBtn");
+
+addBtn.addEventListener("click", function() {
+  const newGoal = input.value;
+
+  if (newGoal.trim() === "") {
+    alert("Please enter a goal.");
+    return;
+  }
+
+  const li = document.createElement("li");
+  li.textContent = newGoal;
+
+  li.addEventListener("click", function() {
+    li.classList.toggle("active-heading");
+  });
+
+  goalList.appendChild(li);
+
+  input.value = "";
 });
