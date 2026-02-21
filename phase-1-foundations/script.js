@@ -50,3 +50,9 @@ addBtn.addEventListener("click", function() {
 
   input.value = "";
 });
+
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    addBtn.click();
+  }
+});
