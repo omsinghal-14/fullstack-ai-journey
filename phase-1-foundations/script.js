@@ -1,7 +1,9 @@
-const headings = document.querySelectorAll("h2");
+let count = 0;
 
-headings.forEach(function(heading) {
-  heading.addEventListener("click", function() {
-    heading.classList.toggle("active-heading");
-  });
+const button = document.querySelector("#clickBtn");
+const text = document.querySelector("#countText");
+
+button.addEventListener("click", function() {
+  count = count + 1;
+  text.textContent = "Clicked " + count + " times";
 });
