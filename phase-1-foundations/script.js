@@ -17,12 +17,16 @@ if (!goals) {
 
 const goalList = document.querySelector("#goalList");
 
-goals.forEach(function (goal) {
+goalList.innerHTML = "";
+
+goals.forEach(function(goal, index) {
   const li = document.createElement("li");
   li.textContent = goal;
 
-  li.addEventListener("click", function () {
-    li.classList.toggle("active-heading");
+  li.addEventListener("dblclick", function() {
+    goals.splice(index, 1);
+    localStorage.setItem("goals", JSON.stringify(goals));
+    location.reload();
   });
 
   goalList.appendChild(li);
@@ -41,6 +45,7 @@ addBtn.addEventListener("click", function () {
 
   goals.push(newGoal);
   localStorage.setItem("goals", JSON.stringify(goals));
+  location.reload();
 
   const li = document.createElement("li");
   li.textContent = newGoal;
