@@ -12,7 +12,7 @@ button.addEventListener("click", function () {
 let goals = JSON.parse(localStorage.getItem("goals"));
 
 if (!goals) {
-  goals = ["Become full stack developer", "Build AI projects", "Get hired"];
+  fetch("http://localhost:3000/api/goals")
 }
 
 const goalList = document.querySelector("#goalList");
